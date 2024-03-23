@@ -23,7 +23,6 @@ $env:FZF_DEFAULT_OPTS = '--height 60% --layout=reverse --border --preview "bat -
 
 # Bat Plugin: https://github.com/sharkdp/bat
 
-
 # Creating custom Stow to create symbolic link
 
 
