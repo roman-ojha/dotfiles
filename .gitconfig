@@ -1,0 +1,7 @@
+[user]
+	email = 80277272+roman-ojha@users.noreply.github.com
+	name = roman-ojha
+[core]
+	editor = nvim -u NONE
+[alias]
+	lg = !git log --graph --oneline --decorate
