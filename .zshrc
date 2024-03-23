@@ -1,20 +1,46 @@
 # NOTE: ZSH configuration for WSL based
-# Custom theme from 'https://ohmyposh.dev'
-eval "$(~/bin/oh-my-posh init zsh --config ~/oh-my-posh-themes/emodipt-extend.omp.json)"
-
 # Adding user Bin to PATH
 export PATH="$HOME/bin:$HOME/.local/bin:$PATH"
 
+# Custom theme from 'https://ohmyposh.dev'
+eval "$(oh-my-posh init zsh --config ~/oh-my-posh-themes/emodipt-extend.omp.json)"
+
+# Setting up Homebrew
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+# Configuration for Tmuxifier
+export PATH="$HOME/.tmuxifier/bin:$PATH"
+eval "$(tmuxifier init -)"
+
+# Default Editor
+export EDITOR='nvim.exe'
+
+# Fuzzy finder config
+if [[ ! "$PATH" == */home/razzroman/.fzf/bin* ]]; then
+  PATH="${PATH:+${PATH}:}/home/razzroman/.fzf/bin"
+fi
+eval "$(fzf --zsh)"
+# export FZF_DEFAULT_OPTS='--height 60% --layout=reverse --border --preview "batcat --color=always --style=numbers --line-range :500 {}"'
+export FZF_DEFAULT_OPTS='--height 60% --layout=reverse --border --preview "batcat --color=always --style=header,grid --line-range :500 {}"'
+
+# Settingup Nvm
+# Add the following to your shell profile e.g. ~/.profile or ~/.zshrc:
+export NVM_DIR="$HOME/.nvm"
+[ -s "/home/linuxbrew/.linuxbrew/opt/nvm/nvm.sh" ] && \. "/home/linuxbrew/.linuxbrew/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/home/linuxbrew/.linuxbrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/home/linuxbrew/.linuxbrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+
+# Add golang to path variable
+export PATH="$PATH:/usr/local/go/bin"
+
 # using pwsh which is windows host terminal
 alias pw='pwsh.exe'
-# using nvim of windows host terminal
+# using nvim of window host terminal
 alias nvim="nvim.exe"
 alias nvimn="nvim.exe -u NONE"
 alias vim="nvim.exe"
 alias vimn="nvim.exe -u None"
 alias lg='lazygit'
 alias ai='sudo apt install'
-
 # https://github.com/Yash-Handa/logo-ls
 alias ils='logo-ls'
 alias ilsa='logo-ls -A'
@@ -24,37 +50,8 @@ alias ilsg='logo-ls -D'
 alias ilag='logo-ls -AD'
 alias illg='logo-ls -alD'
 alias lazydocker='sudo lazydocker'
-
-# Setting up Homebrew
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-
-# Configuration for Tmuxifier
-export PATH="$HOME/.tmuxifier/bin:$PATH"
-eval "$(tmuxifier init -)"
-
-# Fuzzy finder config
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-eval "$(fzf --zsh)"
-# export FZF_DEFAULT_OPTS='--height 60% --layout=reverse --border --preview "batcat --color=always --style=numbers --line-range :500 {}"'
-export FZF_DEFAULT_OPTS='--height 60% --layout=reverse --border --preview "batcat --color=always --style=header,grid --line-range :500 {}"'
-
 # Bat config
 alias bat="batcat"
-
-# Default Editor
-export EDITOR='nvim.exe'
-
-
-# Add golang to path variable
-export PATH="$PATH:/usr/local/go/bin"
-
-
-# Settingup Nvm
-# Add the following to your shell profile e.g. ~/.profile or ~/.zshrc:
-export NVM_DIR="$HOME/.nvm"
-[ -s "/home/linuxbrew/.linuxbrew/opt/nvm/nvm.sh" ] && \. "/home/linuxbrew/.linuxbrew/opt/nvm/nvm.sh"  # This loads nvm
-[ -s "/home/linuxbrew/.linuxbrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/home/linuxbrew/.linuxbrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
-
 
 # Default from Oh My Zsh ================================================
 
