@@ -20,16 +20,15 @@ $Target = Resolve-Path $TargetPath
 
 # Check if the Targetd file path exists
 if (-not (Test-Path -Path $Target -PathType Leaf)) {
-    Write-Host "Error: Targeted file '$Target' does not exist."
+    # given $Target doesn't contain a filename
+    New-Item -ItemType SymbolicLink -Path $LinkPath -Target $Target
     exit
 }
 
 # Get the filename from the $Target
 $FileName = Split-Path -Path $Target -Leaf
-echo $FileName
 
 $LinkPathLeaf = Split-Path -Path $LinkPath -Leaf
-echo $LinkPathLeaf
 
 if (-not ($LinkPathLeaf -eq $FileName)){
   # $LinkPath doesn't contain the filename

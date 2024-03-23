@@ -1,0 +1,3 @@
+[submodule "windows/AppData/Local/nvim/lua/user"]
+	path = windows/AppData/Local/nvim/lua/user
+	url = git@github.com:roman-ojha/nvim-config.git
