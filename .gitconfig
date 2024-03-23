@@ -3,5 +3,6 @@
 	name = roman-ojha
 [core]
 	editor = nvim -u NONE
+	autocrlf = true
 [alias]
 	lg = !git log --graph --oneline --decorate
