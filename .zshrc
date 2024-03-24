@@ -6,4 +6,5 @@
 [ -f ~/.zsh/nvm.zsh ] && source ~/.zsh/nvm.zsh
 [ -f ~/.zsh/aliases.zsh ] && source ~/.zsh/aliases.zsh
 [ -f ~/.zsh/oh-my-zsh.zsh ] && source ~/.zsh/oh-my-zsh.zsh
+[ -f ~/.zsh/keybind.zsh ] && source ~/.zsh/keybind.zsh
 
