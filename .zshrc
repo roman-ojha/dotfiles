@@ -8,4 +8,5 @@
 [ -f ~/.zsh/oh-my-zsh.zsh ] && source ~/.zsh/oh-my-zsh.zsh
 [ -f ~/.zsh/keybind.zsh ] && source ~/.zsh/keybind.zsh
 [ -f ~/.zsh/tldr.zsh ] && source ~/.zsh/tldr.zsh
+[ -f ~/.zsh/zoxide.zsh ] && source ~/.zsh/zoxide.zsh
 
