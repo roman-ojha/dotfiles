@@ -4,9 +4,9 @@
 [ -f ~/.zsh/fzf.zsh ] && source ~/.zsh/fzf.zsh
 [ -f ~/.zsh/golang.zsh ] && source ~/.zsh/golang.zsh
 [ -f ~/.zsh/nvm.zsh ] && source ~/.zsh/nvm.zsh
-[ -f ~/.zsh/aliases.zsh ] && source ~/.zsh/aliases.zsh
 [ -f ~/.zsh/oh-my-zsh.zsh ] && source ~/.zsh/oh-my-zsh.zsh
 [ -f ~/.zsh/keybind.zsh ] && source ~/.zsh/keybind.zsh
 [ -f ~/.zsh/tldr.zsh ] && source ~/.zsh/tldr.zsh
 [ -f ~/.zsh/zoxide.zsh ] && source ~/.zsh/zoxide.zsh
+[ -f ~/.zsh/aliases.zsh ] && source ~/.zsh/aliases.zsh
 
