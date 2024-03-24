@@ -39,6 +39,10 @@ function tldrf {
 }
 
 
+# Zoxide config:
+Invoke-Expression (& { (zoxide init powershell | Out-String) })
+
+
 if ($host.Name -eq 'ConsoleHost' -or $host.Name -eq 'Visual Studio Code Host' ) {
 
   Import-Module PSReadline
