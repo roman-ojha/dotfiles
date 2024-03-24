@@ -40,7 +40,8 @@ function tldrf {
 
 
 # Zoxide config:
-Invoke-Expression (& { (zoxide init powershell | Out-String) })
+# NOTE that we are aliasing zoxide to cd
+Invoke-Expression (& { (zoxide init --cmd cd powershell | Out-String) })
 
 
 if ($host.Name -eq 'ConsoleHost' -or $host.Name -eq 'Visual Studio Code Host' ) {
