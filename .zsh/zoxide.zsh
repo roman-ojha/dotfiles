@@ -1,2 +1,3 @@
 # https://github.com/ajeetdsouza/zoxide
-eval "$(zoxide init zsh)"
+# NOTE that we are aliasing zoxide to cd
+eval "$(zoxide init --cmd cd zsh)"
