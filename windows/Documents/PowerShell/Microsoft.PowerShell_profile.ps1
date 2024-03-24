@@ -25,6 +25,19 @@ $env:FZF_DEFAULT_OPTS = '--height 60% --layout=reverse --border --preview "bat -
 
 # Creating custom Stow to create symbolic link
 
+# TLDR List with Fuzzy finder
+function tldrf {
+  # tldr: https://github.com/tldr-pages/tldr
+  # Installed tldr using node client: https://github.com/tldr-pages/tldr-node-client
+  $TLDR_LIST = tldr --list --windows
+  $TLDR_LIST = $TLDR_LIST -split ', '
+  $TLDR_LIST_STR
+  foreach ($TLDR in $TLDR_LIST) {
+    $TLDR_LIST_STR += "$TLDR`n"
+  }
+  echo $TLDR_LIST_STR | fzf --preview "tldr {1} --theme=ocean" | xargs tldr --theme=ocean
+}
+
 
 if ($host.Name -eq 'ConsoleHost' -or $host.Name -eq 'Visual Studio Code Host' ) {
 
