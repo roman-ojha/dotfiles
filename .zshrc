@@ -7,4 +7,5 @@
 [ -f ~/.zsh/aliases.zsh ] && source ~/.zsh/aliases.zsh
 [ -f ~/.zsh/oh-my-zsh.zsh ] && source ~/.zsh/oh-my-zsh.zsh
 [ -f ~/.zsh/keybind.zsh ] && source ~/.zsh/keybind.zsh
+[ -f ~/.zsh/tldr.zsh ] && source ~/.zsh/tldr.zsh
 
